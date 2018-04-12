@@ -1,0 +1,36 @@
+{
+  "name": "react-crud-operations",
+  "version": "1.0.0",
+  "description": "crud operations using react",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack -w --mode development",
+    "prod": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BharathiPadala/react-crud-operations.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BharathiPadala/react-crud-operations/issues"
+  },
+  "homepage": "https://github.com/BharathiPadala/react-crud-operations#readme",
+  "dependencies": {
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "react-fontawesome": "^1.6.1",
+    "react-icons": "^2.2.7",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
+  }
+}
