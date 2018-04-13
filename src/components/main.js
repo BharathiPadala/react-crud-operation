@@ -8,14 +8,11 @@ class Main extends React.Component{
         this.emptyQuote = {
             id: '',
             quoteText: '',
-            authorName: '',
-            likes:''
+            authorName: ''
           };
           this.state = {
             quotes: props.quotes,
-            selectedQuote: this.emptyQuote,
-            likes:0,
-            islike:false
+            selectedQuote: this.emptyQuote
           }
     }
     selectQuote(id) {
