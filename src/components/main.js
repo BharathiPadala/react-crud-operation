@@ -8,7 +8,8 @@ class Main extends React.Component{
         this.emptyQuote = {
             id: '',
             quoteText: '',
-            authorName: ''
+            authorName: '',
+            likes:0
           };
           this.state = {
             quotes: props.quotes,
@@ -99,7 +100,7 @@ class Main extends React.Component{
                     <a href="#" 
                       onClick={() => this.likeQuote(quote.id,index)}
                       className="btn btn-like">
-                      <FontAwesome.FaThumbsOUp/>{quote.likes}</a>
+                      <FontAwesome.FaThumbsOUp/>{quote.likes>0?quote.likes:0}</a>
                   </div>
                   </div>                 
                  </div>                
