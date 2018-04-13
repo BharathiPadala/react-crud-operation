@@ -9,12 +9,14 @@ const quotes = [
    {
     id: '1',
     quoteText:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.',
-    authorName:'Author1'
+    authorName:'Author1',
+    likes:2
    },
    {
     id: '2',
     quoteText:'Lorem ipsum dolor sit amet, consectetur adipiscing elit ...',
-    authorName:'Author2'
+    authorName:'Author2',
+    likes:3
    }
   ];
 

@@ -9,12 +9,13 @@ class Main extends React.Component{
             id: '',
             quoteText: '',
             authorName: '',
-            likes:0
+            likes:''
           };
           this.state = {
             quotes: props.quotes,
             selectedQuote: this.emptyQuote,
-            likes:0
+            likes:0,
+            islike:false
           }
     }
     selectQuote(id) {
@@ -64,15 +65,9 @@ class Main extends React.Component{
           selectedQuote: this.emptyQuote
         })
     }
-    likeQuote(id){
-        this.state.quotes.find(quote => {
-          debugger;
-          if (id == quote.id) {
-            this.setState({
-             likes:this.state.selectedQuote.likes+1,
-             })         
-          }
-        });
+    likeQuote(id,index){ 
+    this.state.quotes[index].likes++; 
+    this.forceUpdate();
     }
     render(){
         debugger;
@@ -85,7 +80,7 @@ class Main extends React.Component{
               deleteQuote={(id) => this.deleteQuote(id)} />
             <hr/>
             <div className="container">
-              {this.state.quotes.map(quote =>(                 
+              {this.state.quotes.map((quote,index) =>(                 
                 <Fragment key={quote.id}>
                  <div className="row">
                   <div className="quote_article">
@@ -105,9 +100,9 @@ class Main extends React.Component{
                       className="btn btn-edit">
                       <FontAwesome.FaEdit/></a> 
                     <a href="#" 
-                      onClick={() => this.likeQuote(quote.id)}
+                      onClick={() => this.likeQuote(quote.id,index)}
                       className="btn btn-like">
-                      <FontAwesome.FaThumbsOUp/>{this.state.likes}</a>
+                      <FontAwesome.FaThumbsOUp/>{quote.likes}</a>
                   </div>
                   </div>                 
                  </div>                
